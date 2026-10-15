@@ -1,0 +1,69 @@
+# ---------------------------------------------------------------------------
+# Secretos / API keys  — NUNCA versionar
+# ---------------------------------------------------------------------------
+.env
+
+# ---------------------------------------------------------------------------
+# Datos. No se versionan: el corpus pesa 194 MB (GitHub rechaza >100 MB) y
+# los crudos se redescargan desde la fuente. El README explica cómo regenerarlos.
+# La barra inicial ancla la regla a la raíz, para NO ignorar docs/portfolio/data/,
+# que sí se publica (son los CSV de métricas que respaldan cada figura).
+# ---------------------------------------------------------------------------
+/data/
+
+# ---------------------------------------------------------------------------
+# Documentos estratégicos personales — NO publicar.
+# Contienen análisis de negocio, decisiones personales y notas privadas.
+# ---------------------------------------------------------------------------
+/docs/BRIEFING_ideacion.md
+/docs/CONTEXTO_2026-09-23_PIVOTE_A_CREDENCIAL.md
+/docs/DIAGNOSTICO_y_vision.md
+/docs/DIAGNOSTICO_y_vision_EXTENDIDO.md
+/docs/RESUMEN_MAESTRO.md
+/docs/FUTURE_NOTES.md
+
+# ---------------------------------------------------------------------------
+# Material de trabajo del portfolio (borradores internos, no el entregable)
+# ---------------------------------------------------------------------------
+/docs/portfolio/NUMBERS.md
+/docs/portfolio/headline.md
+/docs/portfolio/project_entry.md
+/docs/portfolio/README_section.md
+
+# ---------------------------------------------------------------------------
+# MVP de la etapa de producto (dirección abandonada). Usa datos sintéticos
+# sobre empresas reales, así que fuera de contexto se puede malinterpretar.
+# Si lo querés publicar igual, borrá la línea de abajo.
+# ---------------------------------------------------------------------------
+/app.py
+
+# ---------------------------------------------------------------------------
+# Herramientas locales de IA / framework GSD. Son ~350 archivos de terceros,
+# con configuración y rutas de esta máquina. No son parte del proyecto.
+# ---------------------------------------------------------------------------
+.claude/
+CLAUDE.md
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+
+# IDE / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

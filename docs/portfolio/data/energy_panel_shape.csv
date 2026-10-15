@@ -1,0 +1,7 @@
+stage,value
+feature_matrix_rows,4335
+train_rows,2965
+test_rows,1370
+n_features_M3,12
+panel_start,2020-01-02
+panel_end,2026-06-19

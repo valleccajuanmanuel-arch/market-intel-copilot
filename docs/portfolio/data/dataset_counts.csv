@@ -1,0 +1,23 @@
+claim,value,source_file,how
+price_panel_rows,9633,prices_daily.parquet,parquet metadata
+price_panel_start,2014-01-02,prices_daily.parquet,min(date)
+price_panel_end,2026-06-22,prices_daily.parquet,max(date)
+price_panel_assets,BRENT|HENRY_HUB|WTI,prices_daily.parquet,unique(asset)
+price_log_return_nonnull,9436,prices_daily.parquet,notna().sum()
+corpus_rows_article_x_asset,84692,news_corpus.parquet,parquet metadata
+corpus_unique_articles,45834,news_corpus.parquet,url.nunique()
+corpus_start,2020-01-02,news_corpus.parquet,min(trading_day)
+corpus_end,2026-06-22,news_corpus.parquet,max(trading_day)
+articles_scored_finbert_energy,45834,sentiment_articles.parquet,url.nunique()
+daily_sentiment_rows_energy,4455,sentiment_daily.parquet,parquet metadata
+finbert_daily_rows_tech,8306,tech_titles_scored.parquet,row count
+tickers_tech,AAPL|AMD|META|MSFT|NVDA|TSLA,tech_titles_scored.parquet,unique(asset)
+tickers_configured_tech,NVDA.US|AAPL.US|MSFT.US|AMD.US|META.US|TSLA.US,src/sectors/baskets.py,SECTORS constant
+finbert_daily_rows_biotech,UNAVAILABLE,-,no scored parquet on disk
+tickers_configured_biotech,MRNA.US|BNTX.US|PFE.US|GILD.US|REGN.US|VRTX.US,src/sectors/baskets.py,SECTORS constant
+finbert_daily_rows_financials,UNAVAILABLE,-,no scored parquet on disk
+tickers_configured_financials,JPM.US|GS.US|BAC.US|MS.US|WFC.US|C.US,src/sectors/baskets.py,SECTORS constant
+modeling_window_start,2020-01-01,src/model/features.py,CORPUS_START constant
+vol_window_days,5,src/model/features.py,VOL_WINDOW constant
+jump_quantile,0.9,src/sectors/ablation.py,TOP_Q constant
+split_date,2024-06-01,src/model/train.py,SPLIT_DATE constant

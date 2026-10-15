@@ -1,0 +1,31 @@
+# Core de datos
+pandas==2.2.*
+numpy==2.*             # subido por scikit-learn; verificado compatible con torch/pyarrow/pandas
+pyarrow==16.*          # Backend de Parquet
+
+# Clientes de API
+requests==2.32.*
+fredapi==0.5.*         # Wrapper oficial de FRED
+apify-client==1.*      # Cliente de Apify
+
+# Utilidades
+python-dotenv==1.*     # Carga de variables de entorno desde .env
+tenacity==8.*          # Reintentos automáticos en llamadas de red
+
+# Calidad de datos
+pandera==0.20.*        # Validación de esquemas de DataFrames
+
+# Visualización
+matplotlib==3.9.*      # Gráficos del notebook de exploración (no estaba en el spec original)
+
+# Desarrollo
+jupyter==1.*
+pytest==8.*
+
+# Módulo 2 — Sentimiento (FinBERT)
+# torch CPU:  pip install --index-url https://download.pytorch.org/whl/cpu torch
+torch==2.*             # backend de inferencia (CPU) [instalado: 2.12.1+cpu]
+transformers==5.*      # modelos HuggingFace (FinBERT) [instalado: 5.12.1]
+
+# Módulo 3 — Modelo de volatilidad
+scikit-learn==1.*      # HistGradientBoosting + métricas [instalado: 1.9.0]
